@@ -1,0 +1,39 @@
+.dropArea{
+    padding: 50px;
+    font-size: 2em;
+    box-shadow: inset 0px 0px 10px 0 #000;
+    border-radius: 10px;
+    .drop{
+        border: 1px dashed red;
+        padding: 50px;
+        text-align: center;
+        p{
+            pointer-events: none;
+            transition: .3s;
+        }
+        i{
+            pointer-events: none;
+            display: none;
+        }
+        &.active{
+            background-color: rgb(133, 219, 3);
+            p{
+                transform: translateY(-50px);
+                color: #fff;
+            }
+            i{
+                animation: ani 1s infinite;
+                display: block;
+                color: #fff;
+            }
+        }
+    }
+}
+@keyframes ani{
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(20px);
+    }
+}

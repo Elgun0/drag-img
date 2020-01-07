@@ -1,0 +1,64 @@
+.dropArea {
+  padding: 50px;
+  font-size: 2em;
+  -webkit-box-shadow: inset 0px 0px 10px 0 #000;
+          box-shadow: inset 0px 0px 10px 0 #000;
+  border-radius: 10px;
+}
+
+.dropArea .drop {
+  border: 1px dashed red;
+  padding: 50px;
+  text-align: center;
+}
+
+.dropArea .drop p {
+  pointer-events: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.dropArea .drop i {
+  pointer-events: none;
+  display: none;
+}
+
+.dropArea .drop.active {
+  background-color: #85db03;
+}
+
+.dropArea .drop.active p {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  color: #fff;
+}
+
+.dropArea .drop.active i {
+  -webkit-animation: ani 1s infinite;
+          animation: ani 1s infinite;
+  display: block;
+  color: #fff;
+}
+
+@-webkit-keyframes ani {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+
+@keyframes ani {
+  from {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+  to {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+}
+/*# sourceMappingURL=style.css.map */
